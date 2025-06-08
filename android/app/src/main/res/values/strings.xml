@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">KrinSys-Mobile</string>
+    <string name="title_activity_main">KrinSys-Mobile</string>
+    <string name="package_name">com.krinsys.app</string>
+    <string name="custom_url_scheme">com.krinsys.app</string>
+</resources>

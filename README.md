@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# 📱 Sample React Mobile App (React + Capacitor)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A starter template to build and run a **React app as a cross-platform Android app** using **Capacitor**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Getting Started
 
-### `npm start`
+### 1️⃣ Clone the Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+git clone https://github.com/sivasankula19/sample-react-mobile.git
+cd sample-react-mobile
+git checkout main
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2️⃣ Install Dependencies
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠 Make Code Changes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Modify the files inside `src/` as needed.
+- Test the web version with:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🌿 Create a Branch for Your Feature
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git checkout -b my-feature-branch
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Make your changes, then commit:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git add .
+git commit -m "Updated app content and configuration"
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ✏️ Rename App Name and ID in Capacitor Config
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Edit `capacitor.config.ts`:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```ts
+const config: CapacitorConfig = {
+  appId: 'com.yourdomain.myapp',
+  appName: 'MyApp',
+  webDir: 'build',
+  bundledWebRuntime: false
+};
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ♻️ Remove Android Folder and Re-add
 
-### Analyzing the Bundle Size
+```bash
+rm -rf android
+npx cap add android
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔁 Sync Capacitor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build       # Build the React app
+npx cap copy        # Copy the build files to native
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📱 Open in Android Studio
 
-### Deployment
+```bash
+npx cap open android
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📦 Build the APK (in Android Studio)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Choose a device/emulator.
+2. Click **Run ▶️**
+3. Or go to `Build > Build Bundle(s)/APK > Build APK`
+
+The generated APK will be in:
+
+```
+android/app/build/outputs/apk/debug/
+```
+
+---
+
+Happy coding! 🚀 Feel free to fork and customize further.

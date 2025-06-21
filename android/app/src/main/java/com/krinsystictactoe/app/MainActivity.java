@@ -1,4 +1,4 @@
-package com.krinsys.app;
+package com.krinsystictactoe.app;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -1,9 +1,9 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'com.krinsys.app',
-  appName: 'KrinSys-Mobile',
-  webDir: 'build'
+  appId: "com.krinsystictactoe.app",
+  appName: "Tic-Tac-Toe",
+  webDir: "build",
 };
 
 export default config;
